@@ -1,0 +1,35 @@
+
+Pre-requisites:
+1. java 1.8
+2. maven
+
+
+Assumptions:
+1. Ignoring line if level is negative or non numeric.
+2. Ignoring line if it has only level but no data.
+3. Ignoring line if it has attribute without any tag.
+
+
+Sample config file:
+- vi config/config.yml
+
+
+Run unit tests:
+- mvn clean test -PunitTests
+
+
+Check code coverage:
+- open target/site/jacoco/index.html in browser
+
+
+Run integration tests:
+- mvn clean test -PintegrationTests
+
+
+Build executable jar:
+- mvn clean package
+
+
+Run application:
+- java -jar target/gedcom-1.0-SNAPSHOT.jar <config file> <input file> <output file>
+    ex: java -jar target/gedcom-1.0-SNAPSHOT.jar config/config.yml src/test/resources/sample.txt /tmp/gedcom.xml

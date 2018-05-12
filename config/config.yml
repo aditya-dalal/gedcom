@@ -1,0 +1,11 @@
+
+inputFileConfig:
+  fieldSeparator: "\\s+"
+  attributeIdentifier: "@"
+
+outputFileConfig:
+  xmlConfig:
+    documentRoot: "gedcom"
+    attributeName: "id"
+    indent: true
+    indentValue: 3
